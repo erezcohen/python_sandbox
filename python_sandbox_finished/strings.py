@@ -1,22 +1,22 @@
 # Strings in python are surrounded by either single or double quotation marks. Let's look at string formatting and some string methods
 
-name = 'Brad'
+name = "Brad"
 age = 37
 
 # Concatenate
-print('Hello, my name is ' + name + ' and I am ' + str(age))
+print("Hello, my name is " + name + " and I am " + str(age))
 
 # String Formatting
 
 # Arguments by position
-print('My name is {name} and I am {age}'.format(name=name, age=age))
+print("My name is {name} and I am {age}".format(name=name, age=age))
 
 # F-Strings (3.6+)
-print(f'Hello, my name is {name} and I am {age}')
+print(f"Hello, my name is {name} and I am {age}")
 
 # String Methods
 
-s = 'helloworld'
+s = "helloworld"
 
 # Capitalize string
 print(s.capitalize())
@@ -34,23 +34,28 @@ print(s.swapcase())
 print(len(s))
 
 # Replace
-print(s.replace('world', 'everyone'))
+print(s.replace("world", "everyone"))
 
 # Count
-sub = 'h'
+sub = "h"
 print(s.count(sub))
 
 # Starts with
-print(s.startswith('hello'))
+print(s.startswith("hello"))
 
 # Ends with
-print(s.endswith('d'))
+print(s.endswith("d"))
 
 # Split into a list
-print(s.split())
+print(s.split("-"))
 
-# Find position
-print(s.find('r'))
+# join list to a string
+print("'-'.join(['2','3']):", "-".join(["2", "3"]))
+# print("'-'.join([2,3])", "-".join([2, 3])) # TypeError: sequence item 0: expected str instance, int found
+
+# Find position (index)
+print("string find", s.find("r"))
+
 
 # Is all alphanumeric
 print(s.isalnum())
